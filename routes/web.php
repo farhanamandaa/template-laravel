@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('content.content');
 });
+
+Route::get('/categories','CategoriesController@index');
+Route::post('/categories','CategoriesController@store');
+Route::get('/categories/{categories}','CategoriesController@destroy');
